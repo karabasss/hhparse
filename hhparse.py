@@ -47,7 +47,7 @@ def parseandStore():
     for i in soup.findAll('a', attrs={'href': re.compile("^/resume/")}):
         worklink = "https://spb.hh.ru/" + i.get('href')
         hhlinks.write(worklink + '\n')
-    #### store html links from urls
+        #### store html links from urls
         response = urllib2.urlopen(worklink)
         webContent = response.read()
         try:
