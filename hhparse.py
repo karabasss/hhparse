@@ -57,8 +57,6 @@ def parseandStore():
         name +=1
         htmlfile.write(webContent)
         htmlfile.close
-    
-    hhlinks.close()
 
 mylink = parseArgs()
 #mylink = raw_input("Paste link please: ")
@@ -74,4 +72,5 @@ soup = BeautifulSoup(url)
 ####
 createDir(dirname)
 parseandStore()
+hhlinks.close()
 #### 
